@@ -13,7 +13,7 @@
       <!-- Input Box -->
       <section class="section-input">
         <label for="listInput" class="section-label">Input List:</label>
-        <textarea id="listInput" placeholder="Enter one item per line">
+        <textarea id="listInput" placeholder="Enter one item per line" rows="3">
 item 1
 item 2
 item 3</textarea
@@ -87,6 +87,17 @@ item 3</textarea
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
+    <script>
+      // Auto-expand textarea as user types
+      const listInput = document.getElementById("listInput");
+      function autoResizeTextarea() {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+      }
+      listInput.addEventListener("input", autoResizeTextarea);
+      // Initial resize
+      autoResizeTextarea.call(listInput);
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
