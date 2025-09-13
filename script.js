@@ -185,7 +185,7 @@ document.getElementById("exportBtn").addEventListener("click", () => {
         zip.file(safeName, base64, { base64: true });
     });
     zip.generateAsync({ type: "blob" }).then(content => {
-        saveAs(content, "items.zip");
+        saveAs(content, "TextToImages.zip");
     });
 });
 

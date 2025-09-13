@@ -53,7 +53,6 @@ button:hover {
 textarea {
   width: 100%;
   min-height: 80px;
-  max-height: 400px;
   font-family: "Fira Mono", "Consolas", "Menlo", monospace;
   color: #1a237e;
   border-radius: 4px;
@@ -122,7 +121,7 @@ select {
 }
 
 .section-settings {
-  background: #f7faff;
+  background: #eef4ff;
   border-radius: 6px;
   padding: 14px 12px 8px 12px;
   margin-bottom: 22px;
@@ -136,7 +135,7 @@ select {
 }
 
 .section-preview {
-  background: #f5f7fb;
+  background: #eef4ff;
   border-radius: 6px;
   padding: 14px 12px 12px 12px;
   box-shadow: 0 1px 3px rgba(25, 118, 210, 0.04);
