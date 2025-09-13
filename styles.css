@@ -1,3 +1,139 @@
+.settings-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0;
+  margin-bottom: 0;
+  table-layout: fixed;
+}
+.settings-table td {
+  padding: 4px 6px;
+  vertical-align: middle;
+  width: 10%;
+}
+.settings-table label {
+  font-weight: 500;
+  color: #1a237e;
+  margin-right: 2px;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.settings-table input[type="number"] {
+  width: 60px;
+  padding: 4px 6px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 15px;
+  background: #fafdff;
+  transition: border-color 0.2s;
+  text-align: left;
+}
+.settings-table input[type="number"]:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+.settings-table input[type="color"] {
+  width: 32px;
+  height: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+.settings-table select {
+  width: 120px;
+  padding: 4px 6px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 15px;
+  background: #fafdff;
+  transition: border-color 0.2s;
+}
+.settings-table select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+.section-title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.section-input {
+  margin-bottom: 18px;
+}
+
+.section-label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.section-settings {
+  background: #f7faff;
+  border-radius: 6px;
+  padding: 14px 12px 8px 12px;
+  margin-bottom: 22px;
+  box-shadow: 0 1px 3px rgba(25, 118, 210, 0.06);
+}
+
+.settings-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.section-preview {
+  background: #f5f7fb;
+  border-radius: 6px;
+  padding: 14px 12px 12px 12px;
+  box-shadow: 0 1px 3px rgba(25, 118, 210, 0.04);
+}
+
+.preview-actions {
+  margin-bottom: 10px;
+}
+
+.preview-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* Custom radio styles for preview choice */
+.preview-choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: #1a237e;
+}
+.radio-label input[type="radio"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #1976d2;
+  margin-right: 6px;
+  box-sizing: border-box;
+  display: inline-block;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.radio-label input[type="radio"]:checked + .custom-radio {
+  background: radial-gradient(circle at center, #1976d2 60%, #fff 61%);
+  border-color: #1976d2;
+}
 body {
   font-family: sans-serif;
   background: #f0f0f0;
@@ -38,4 +174,8 @@ button {
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
+}
+
+#listInput div {
+  margin-bottom: 8px; /* spacing only for manual line breaks */
 }

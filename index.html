@@ -7,37 +7,81 @@
   </head>
   <body>
     <div class="container">
-      <h1>List Exporter</h1>
+      <!-- Page Title -->
+      <header class="section-title"><h1>List Exporter</h1></header>
 
-      <textarea id="listInput">
-- item 1
-- item 2
-- item 3</textarea
-      >
+      <!-- Input Box -->
+      <section class="section-input">
+        <label for="listInput" class="section-label">Input List:</label>
+        <textarea id="listInput" placeholder="Enter one item per line">
+item 1
+item 2
+item 3</textarea
+        >
+      </section>
 
-      <div class="settings">
-        <label>Width: <input type="number" id="width" value="512" /></label>
-        <label>Height: <input type="number" id="height" value="512" /></label>
-        <label
-          >Font:
-          <select id="font">
-            <option value="Arial" selected>Arial</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Courier New">Courier New</option>
-            <option value="Georgia">Georgia</option>
-          </select>
-        </label>
-        <label
-          >Text Color: <input type="color" id="textColor" value="#000000"
-        /></label>
-        <label
-          >Background Color: <input type="color" id="bgColor" value="#ffffff"
-        /></label>
-      </div>
+      <!-- Settings -->
+      <section class="section-settings">
+        <table class="settings-table">
+          <tr>
+            <td><label for="width">Width:</label></td>
+            <td><input type="number" id="width" value="128" /></td>
+            <td><label for="height">Height:</label></td>
+            <td><input type="number" id="height" value="128" /></td>
+          </tr>
+          <tr>
+            <td><label for="textColor">Text Color:</label></td>
+            <td><input type="color" id="textColor" value="#111424" /></td>
+            <td><label for="bgColor">Background Color:</label></td>
+            <td><input type="color" id="bgColor" value="#d4ebff" /></td>
+          </tr>
+          <tr>
+            <td><label for="font">Font:</label></td>
+            <td colspan="3">
+              <select id="font">
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Arial" selected>Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </section>
 
-      <button id="exportBtn">Export All</button>
-      <canvas id="canvas" style="display: none"></canvas>
+      <!-- Preview Section -->
+      <section class="section-preview">
+        <div class="preview-actions">
+          <button id="exportBtn">Download as zip</button>
+        </div>
+        <div class="preview-choice">
+          <span>Preview:</span>
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="previewMode"
+              id="previewAll"
+              value="all"
+              checked
+            />
+            <span class="custom-radio"></span> All
+          </label>
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="previewMode"
+              id="previewSample"
+              value="sample"
+            />
+            <span class="custom-radio"></span>Last 3 items
+          </label>
+        </div>
+
+        <canvas id="canvas" style="display: none"></canvas>
+        <div id="imageContainer" class="preview-images"></div>
+      </section>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
