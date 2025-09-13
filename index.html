@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>List Exporter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>List Exporter</h1>
+
+      <textarea id="listInput">
+- item 1
+- item 2
+- item 3</textarea
+      >
+
+      <div class="settings">
+        <label>Width: <input type="number" id="width" value="512" /></label>
+        <label>Height: <input type="number" id="height" value="512" /></label>
+        <label
+          >Font:
+          <select id="font">
+            <option value="Arial" selected>Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+          </select>
+        </label>
+        <label
+          >Text Color: <input type="color" id="textColor" value="#000000"
+        /></label>
+        <label
+          >Background Color: <input type="color" id="bgColor" value="#ffffff"
+        /></label>
+      </div>
+
+      <button id="exportBtn">Export All</button>
+      <canvas id="canvas" style="display: none"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
